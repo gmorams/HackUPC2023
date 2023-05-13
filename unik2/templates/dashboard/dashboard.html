@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+GeoConcert
+{% endblock title %}
+
+{% block head %}
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+
+<body>
+    <h1>Dashboard</h1>
+    <div id="subjects">
+        {% for subject in subjects %}
+            <div class="subject">
+                <h2>{{ subject.nombre }}</h2>
+                <p>Creditos: {{ subject.creditos }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
